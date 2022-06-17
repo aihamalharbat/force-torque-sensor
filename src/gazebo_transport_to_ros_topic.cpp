@@ -25,8 +25,8 @@ double ros_rate=20;
 
 void torquesCb(const ConstWrenchStampedPtr &_msg)
 {
-  std::cout << "Received msg: " << std::endl;
-  std::cout << _msg->DebugString() << std::endl;
+  // std::cout << "Received msg: " << std::endl;
+  // std::cout << _msg->DebugString() << std::endl;
   geometry_msgs::WrenchStamped msgWrenchedStamped;
   // try WrenchStamped msgWrenchedStamped;
   msgWrenchedStamped.header.stamp = ros::Time::now();
@@ -60,8 +60,8 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
 
   // Get ROS params
-  std::string gazebo_transport_topic_to_sub= "/gazebo/default/robot/wrist_3_joint/wrist_3_joint_force_torque/wrench";
-  std::string ros_topic_to_pub="force_torque/robot/wrist_3_joint_force_torque";
+  std::string gazebo_transport_topic_to_sub= "/gazebo/default/fiberthex/fixed-ee/force_torque/wrench";
+  std::string ros_topic_to_pub="force_torque/ee";
   
   //double ros_rate;
   //ros::param::get("~gazebo_transport_topic_to_sub", gazebo_transport_topic_to_sub);

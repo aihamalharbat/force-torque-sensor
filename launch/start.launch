@@ -1,0 +1,5 @@
+<launch>
+
+<node name="ft_sensor_ros_publisher" pkg="ft_sensor" type="ft_sensor_gazebo_transport_to_ros_topic" output="screen">
+</node>
+</launch>
